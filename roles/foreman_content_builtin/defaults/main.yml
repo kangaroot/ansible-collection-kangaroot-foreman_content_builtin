@@ -39,6 +39,8 @@ foreman_partition_tables_builtin:
     <<: *foreman_partition_tables_osrhel
   - name: Kickstart default
     <<: *foreman_partition_tables_osrhel
+  - name: Kickstart default encrypted
+    <<: *foreman_partition_tables_osrhel
   - name: Kickstart default thin
     <<: *foreman_partition_tables_osrhel
   - name: Kickstart dynamic
