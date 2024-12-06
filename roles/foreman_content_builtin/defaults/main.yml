@@ -81,16 +81,6 @@ foreman_provisioning_templates_builtin:
     <<: *foreman_provisioning_templates_defaults
     kind: cloud-init
 
-  - name: Discovery Red Hat kexec
-    <<: *foreman_provisioning_templates_osrhel
-    kind: kexec
-  - name: Discovery Debian kexec
-    <<: *foreman_provisioning_templates_osdebian
-    kind: kexec
-  - name: Discovery Ubuntu kexec Autoinstall
-    <<: *foreman_provisioning_templates_osubuntu
-    kind: kexec
-
   - name: Kickstart default
     <<: *foreman_provisioning_templates_osrhel
     kind: provision
@@ -149,3 +139,16 @@ foreman_provisioning_templates_builtin:
     <<: *foreman_provisioning_templates_osubuntu
     kind: PXELinux
 
+  # These templates depend on the Discovery plugin
+  # - name: Discovery Red Hat kexec
+  #   <<: *foreman_provisioning_templates_osrhel
+  #   kind: kexec
+  #   locked: yes
+  # - name: Discovery Debian kexec
+  #   <<: *foreman_provisioning_templates_osdebian
+  #   kind: kexec
+  #   locked: yes
+  # - name: Discovery Ubuntu kexec Autoinstall
+  #   <<: *foreman_provisioning_templates_osubuntu
+  #   kind: kexec
+  #   locked: yes
